@@ -1,7 +1,7 @@
 angular.module('myApp', []).controller('namesCtrl', function($scope) {
     $scope.names = [
-        {name:'Jani',country:'Norway'},
-        {name:'Hege',country:'Sweden'},
-        {name:'Kai',country:'Denmark'}
+        {name:'Cruster',initiative:10},
+        {name:'DevilMan',initiative:15},
+        {name:'Balouga',initiative:5}
     ];
 });
