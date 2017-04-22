@@ -21,14 +21,14 @@ initApp.config(function($routeProvider) {
 //SERVICES
 initApp.service('rollService', function() {
     this.order = [
-        { name:'Vesker', roll:'', upPic:'/img/vesker-alt1.jpg' },
-        { name:'Luna', roll:'', upPic:'/img/luna1.jpg' },
-        { name:'Wolf', roll:'', upPic:'/img/wolf1.jpg' },
-        { name:'Cruster', roll:'', upPic:'/img/cruster1.jpg' },
-        { name:'Grim', roll:'', upPic:'/img/grim1.jpg' },
-        { name:'Iris', roll:'', upPic:'/img/iris1.jpg' },
-        { name:'Vorr', roll:'', upPic:'/img/spenkimbo1.jpg' },
-        { name:'Enemies', roll:'', upPic:'/img/enemies1.jpg' }
+        { name:'Vesker', roll:'', upPic:'img/vesker-alt1.jpg' },
+        { name:'Luna', roll:'', upPic:'img/luna1.jpg' },
+        { name:'Wolf', roll:'', upPic:'img/wolf1.jpg' },
+        { name:'Cruster', roll:'', upPic:'img/cruster1.jpg' },
+        { name:'Grim', roll:'', upPic:'img/grim1.jpg' },
+        { name:'Iris', roll:'', upPic:'img/iris1.jpg' },
+        { name:'Vorr', roll:'', upPic:'img/spenkimbo1.jpg' },
+        { name:'Enemies', roll:'', upPic:'img/enemies1.jpg' }
     ];
 });
 
@@ -43,7 +43,7 @@ initApp.controller('setupController', ['$scope', 'rollService', 'ehpService', fu
     $scope.ehp = ehpService.ehp;
     
     $scope.playerAdd = function() {
-        $scope.order.push({name:$scope.playerInput, roll:'0', upPic:'/img/Silhouette-question-mark.jpeg'});
+        $scope.order.push({name:$scope.playerInput, roll:'0', upPic:'img/Silhouette-question-mark.jpeg'});
         $scope.playerInput = "";
     };
     
