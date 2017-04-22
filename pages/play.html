@@ -1,0 +1,50 @@
+<section class="section-portraits container-fluid">
+    <ul class="player-lineup clearfix">
+        <li ng-repeat="item in order | orderObjectBy:'roll':true">
+            <figure class="player-photo">
+                <img ng-style="{opacity: $index == curr ? '1' : '0.4'}" src="{{ item.upPic }}" />
+            </figure>
+        </li>
+    </ul>
+    <div class="row col-xs-12 nameDisplay" ng-repeat="n in order | orderObjectBy:'roll':true" ng-if="$index == curr">
+        <p class="currentPlayer">{{ n.name }}</p>
+    </div>
+</section>
+<div id="row col-xs-12">
+    <br><button class="btn btn-primary" type="button" ng-click="nextPlayer()">Next</button>
+</div>
+
+
+<hr />
+
+<div class="container">
+    <div ng-repeat="e in ehp | orderObjectBy:'name':false">
+        <p>{{ e.name }} : HP: <input type="number" value="{{ e.hp }}" ng-model="e.hp" />
+            AC: <input type="number" value="{{ e.ac }}" ng-model="e.ac" /></p>
+    </div>
+</div>
+
+
+<!--
+
+
+<div class="container-fluid">
+<div class="row col-xs-12 col-sm-1 portraits" ng-repeat="item in order | orderObjectBy:'roll':true">
+<img src="{{ item.upPic }}" class="img-rounded currActive" />
+</div>
+<div class="row col-xs-12 nameDisplay" ng-repeat="n in order | orderObjectBy:'roll':true" ng-if="$index == curr">
+<p class="currentPlayer">{{ n.name }}</p>
+</div>
+</div>
+<div id="row col-xs-12">
+<br><button class="btn btn-primary" type="button" ng-click="nextPlayer()">Next</button>
+</div>
+
+
+
+
+
+
+ng-class="{currActive:$index == curr, currInactive:$index != curr}"
+
+-->

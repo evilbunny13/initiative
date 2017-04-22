@@ -1,0 +1,93 @@
+html, body, input, select, textarea
+{
+    font-size: 1.05em;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.section-portraits {
+    padding: 0;
+}
+
+.player-lineup {
+    padding: 0;
+    list-style: none;
+    width: 125%;
+}
+
+.player-lineup li {
+    display: block;
+    float: left;
+    width: 10%;
+}
+
+.player-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.player-photo img {
+    /*opacity: 0.7;*/
+    width: 100%;
+    height: auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.player-photo-active {
+    /*opacity: 1;*/
+}
+
+.currActive {
+    width: 100px;
+    height: 100px;
+}
+
+.currInactive {
+    width: 70px;
+    height: 70px;
+}
+
+.currNameActive {
+    visibility: visible;
+    color: azure;
+}
+
+.currNameInactive {
+    visibility: hidden;
+}
+
+input[type=number] {
+    width: 80px;
+}
+
+.isSelected {
+    background-color: darkslategray;
+}
+
+.nameDisplay {
+    background-color: dimgrey;
+    color: azure;
+    margin-top: 20px;
+}
+
+#currentPlayer {
+    font-size: 1.25em;
+}
+
+.portraits {
+    margin-right: 32px;
+}
+
+.nameBox {
+    width: 150px;
+}

@@ -1,0 +1,34 @@
+<div>
+    <div ng-repeat="item in order">
+        <!--<input type="text" value="{{ item.name }}" ng-model="item.name" size="15" readonly />-->
+        <label class="nameBox" ng-model="item.name">{{ item.name }}</label>
+        <input type="number" value="{{ item.roll }}" ng-model="item.roll" /><br>
+    </div>
+</div>
+
+<div>
+    <br><a href="#/play"><button class="btn btn-primary">Fight</button></a>
+</div>
+<hr />
+<br><form ng-submit="playerAdd()">
+    <input type="text" ng-model="playerInput" size="25" placeholder="Add NPC">
+    <input type="submit" value="Add New" class="btn btn-primary">
+</form>
+
+<hr />
+
+<div>
+    <div ng-repeat="e in ehp">
+        <input type="text" value="{{ e.name }}" ng-model="e.name" />
+        HP: <input type="number" value="{{ e.hp }}" ng-model="e.hp" />
+        AC: <input type="number" value="{{ e.ac }}" ng-model="e.ac" /><br>
+    </div>
+</div>
+<p>
+<div>
+    <br><form ng-submit="enemyAdd()">
+        <input type="text" ng-model="enemyInput" size="25" placeholder="Add Enemy">
+        <input type="submit" value="Add Enemy" class="btn btn-primary">
+    </form>
+</div>
+</p>
